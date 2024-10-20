@@ -17,7 +17,7 @@ int myFunction(int, int);
 
 void setup() {
   Serial.begin(115200);
-  Wire.begin(11, 7); // SDA, SCL
+  Wire.begin(11, 7); // SDA, SCL ->> C3 的 IO11 是 VDD_SPI 不能用
   pinMode(irqPin, INPUT);
   attachInterrupt(digitalPinToInterrupt(7), irqInterrupt, CHANGE);
   // put your setup code here, to run once:
